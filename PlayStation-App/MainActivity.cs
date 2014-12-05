@@ -6,18 +6,22 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Support.V4.App;
+using Android.Support.V7.Widget;
 using Android.Util;
 using PlayStationApp.Adapters;
 using PlayStationApp.Core.Entities;
 using PlayStationApp.Core.Managers;
+using PlayStationApp.Fragments;
 
 namespace PlayStationApp
 {
 	[Activity (Label = "PlayStation-App", MainLauncher = true, Icon = "@drawable/icon")]
-	public class MainActivity : Activity
+	public class MainActivity : FragmentActivity
 	{
 		int count = 1;
-        private UserAccountEntity _userAccountEntity { get; set; }
+        private UserAccountEntity UserAccountEntity { get; set; }
+        public RecyclerView RecyclerView;
         protected async override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -30,25 +34,46 @@ namespace PlayStationApp
 
             if (isLoggedIn)
             {
-                _userAccountEntity = new UserAccountEntity();
-                isLoggedIn = await LoginTest(_userAccountEntity);
+                UserAccountEntity = new UserAccountEntity();
+                isLoggedIn = await LoginTest(UserAccountEntity);
             }
 		    if (!isLoggedIn)
 		    {
-                StartActivity(typeof(LoginActivity));
+		        try
+		        {
+                    StartActivity(typeof(LoginActivity));
+                }
+		        catch (Exception ex)
+		        {
+		            
+		            throw;
+		        }
 		        return;
 		    }
-            var recentActivityManager = new RecentActivityManager();
+            try
+            {
+                
+                var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+                SetActionBar(toolbar);
+                ActionBar.Title = "PlayStation";
+                var fragment = new RecentActivityFragment();
+                var fragmentTransaction = SupportFragmentManager.BeginTransaction();
+                fragmentTransaction.Add(Resource.Id.recentActivityFragment, fragment, "RecentActivityFragment");
+                fragmentTransaction.Commit();
 
-            var result =
-                await
-                    recentActivityManager.GetActivityFeed(_userAccountEntity.GetUserEntity().OnlineId, 0, true, true,
-                        _userAccountEntity);
-            ListView listView = FindViewById<ListView>(Resource.Id.recentActivityList);
-            listView.Adapter = new RecentActivityAdapter(this, result.feed);
+                var frag = SupportFragmentManager.FindFragmentByTag("RecentActivityFragment") as RecentActivityFragment;
+                frag?.InitDataSet(UserAccountEntity);
+            }
+            catch (Exception ex)
+            {
+                
+                throw;
+            }
         }
 
-	    private async Task<bool> LoginTest(UserAccountEntity userAccountEntity)
+        public RecyclerView.Adapter adapter;
+
+        private async Task<bool> LoginTest(UserAccountEntity userAccountEntity)
 	    {
             var authManager = new AuthenticationManager();
             UserAccountEntity.User user = await authManager.GetUserEntity(userAccountEntity);

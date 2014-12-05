@@ -71,11 +71,6 @@ namespace PlayStationApp.Core.Managers
             }
         }
 
-        public Task<Result> GetData(string uri, UserAccountEntity userAccountEntity)
-        {
-            throw new NotImplementedException();
-        }
-
         public class Result
         {
             public Result(bool isSuccess, string json)
