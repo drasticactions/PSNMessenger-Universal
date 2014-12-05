@@ -25,6 +25,12 @@ namespace PlayStationApp.Core.Managers
                 {
                     await authenticationManager.RefreshAccessToken(userAccountEntity);
                 }
+                var user = userAccountEntity.GetUserEntity();
+                if (user != null)
+                {
+                    var language = userAccountEntity.GetUserEntity().Language;
+                    httpClient.DefaultRequestHeaders.Add("Accept-Language", language);
+                }
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", userAccountEntity.GetAccessToken());
                 var response = await httpClient.PostAsync(uri, header);
                 var responseContent = await response.Content.ReadAsStringAsync();
@@ -46,6 +52,12 @@ namespace PlayStationApp.Core.Managers
                 if (userAccountEntity.GetAccessToken().Equals("refresh"))
                 {
                     await authenticationManager.RefreshAccessToken(userAccountEntity);
+                }
+                var user = userAccountEntity.GetUserEntity();
+                if (user != null)
+                {
+                    var language = userAccountEntity.GetUserEntity().Language;
+                    httpClient.DefaultRequestHeaders.Add("Accept-Language", language);
                 }
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", userAccountEntity.GetAccessToken());
                 var response = await httpClient.GetAsync(uri);
