@@ -17,7 +17,7 @@ using PlayStationApp.Fragments;
 namespace PlayStationApp
 {
 	[Activity (Label = "PlayStation-App", MainLauncher = true, Icon = "@drawable/icon")]
-	public class MainActivity : FragmentActivity
+	public class MainActivity : Activity
 	{
 		int count = 1;
         private UserAccountEntity UserAccountEntity { get; set; }
@@ -48,21 +48,16 @@ namespace PlayStationApp
 		            
 		            throw;
 		        }
+		        Finish();
 		        return;
 		    }
             try
             {
                 
-                var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+                var toolbar = FindViewById<Android.Widget.Toolbar>(Resource.Id.toolbar);
                 SetActionBar(toolbar);
-                ActionBar.Title = "PlayStation";
-                var fragment = new RecentActivityFragment();
-                var fragmentTransaction = SupportFragmentManager.BeginTransaction();
-                fragmentTransaction.Add(Resource.Id.recentActivityFragment, fragment, "RecentActivityFragment");
-                fragmentTransaction.Commit();
+                ActionBar.Title = "プレステ API";
 
-                var frag = SupportFragmentManager.FindFragmentByTag("RecentActivityFragment") as RecentActivityFragment;
-                frag?.InitDataSet(UserAccountEntity);
             }
             catch (Exception ex)
             {

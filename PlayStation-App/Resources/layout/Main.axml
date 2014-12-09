@@ -13,9 +13,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:background="?android:attr/colorPrimary" />
-    <FrameLayout
-        android:id="@+id/recentActivityFragment"
-        android:layout_weight="2"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"

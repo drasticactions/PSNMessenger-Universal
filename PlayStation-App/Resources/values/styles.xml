@@ -11,6 +11,7 @@
     <!-- colorAccent is used as the default value for colorControlActivated
          which is used to tint widgets -->
     <item name="android:colorAccent">#FF4081</item>
+    <item name="android:textColorPrimary">#FFFFFF</item>
     <!-- You can also set colorControlNormal, colorControlActivated
          colorControlHighlight and colorSwitchThumbNormal. -->
   </style>

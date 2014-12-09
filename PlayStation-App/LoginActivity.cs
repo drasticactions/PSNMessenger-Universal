@@ -51,6 +51,8 @@ namespace PlayStationApp
                 if (!queryString.ContainsKey("authCode")) return;
                 var authManager = new AuthenticationManager();
                 await authManager.RequestAccessToken(queryString["authCode"]);
+                _activity.StartActivity(typeof(LoginActivity));
+                _activity.Finish();
             }
         }
     }
