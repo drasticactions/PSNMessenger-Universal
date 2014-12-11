@@ -17,7 +17,7 @@ using PlayStationApp.Fragments;
 namespace PlayStationApp
 {
 	[Activity (Label = "PlayStation-App", MainLauncher = true, Icon = "@drawable/icon")]
-	public class MainActivity : Activity
+	public class MainActivity : FragmentActivity
 	{
 		int count = 1;
         private UserAccountEntity UserAccountEntity { get; set; }
@@ -27,11 +27,10 @@ namespace PlayStationApp
 			base.OnCreate (bundle);
 
             // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.Main);
 
             var authManager = new AuthenticationManager();
 		    var isLoggedIn = authManager.HasLoginTokens();
-
+            //var isLoggedIn = true;
             if (isLoggedIn)
             {
                 UserAccountEntity = new UserAccountEntity();
@@ -39,31 +38,19 @@ namespace PlayStationApp
             }
 		    if (!isLoggedIn)
 		    {
-		        try
-		        {
-                    StartActivity(typeof(LoginActivity));
-                }
-		        catch (Exception ex)
-		        {
-		            
-		            throw;
-		        }
-		        Finish();
+                StartActivity(typeof(LoginActivity));
+                Finish();
 		        return;
 		    }
-            try
-            {
-                
-                var toolbar = FindViewById<Android.Widget.Toolbar>(Resource.Id.toolbar);
-                SetActionBar(toolbar);
-                ActionBar.Title = "プレステ API";
 
-            }
-            catch (Exception ex)
-            {
-                
-                throw;
-            }
+            SetContentView(Resource.Layout.Main);
+            var toolbar = FindViewById<Android.Widget.Toolbar>(Resource.Id.toolbar);
+            SetActionBar(toolbar);
+            ActionBar.Title = "プレステ API";
+            var transaction = SupportFragmentManager.BeginTransaction();
+            var fragment = new RecentActivityFragment(UserAccountEntity);
+            transaction.Replace(Resource.Id.recentActivityFragment, fragment);
+            transaction.Commit();
         }
 
         public RecyclerView.Adapter adapter;

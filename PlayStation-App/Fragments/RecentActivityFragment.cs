@@ -22,11 +22,22 @@ namespace PlayStationApp.Fragments
         public RecyclerView recyclerView;
         public RecyclerView.Adapter adapter;
         public RecyclerView.LayoutManager layoutManager;
+        private readonly UserAccountEntity _userAccountEntity;
+
+        public RecentActivityFragment()
+        {
+            
+        }
+
+        public RecentActivityFragment(UserAccountEntity userAccountEntity)
+        {
+            _userAccountEntity = userAccountEntity;
+        }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
 
-            var rootView = inflater.Inflate(Resource.Layout.recycler_view_frag, container, false);
+            var rootView = inflater.Inflate(Resource.Layout.RecyclerViewFragment, container, false);
             rootView.SetTag(rootView.Id, TAG);
             recyclerView = rootView.FindViewById<RecyclerView>(Resource.Id.recyclerView);
 
@@ -36,16 +47,17 @@ namespace PlayStationApp.Fragments
             layoutManager = new LinearLayoutManager(Activity);
             recyclerView.SetLayoutManager(layoutManager);
 
+            InitDataSet();
             return rootView;
         }
 
 
-        public async void InitDataSet(UserAccountEntity userAccountEntity)
+        public async void InitDataSet()
         {
             var recentActivityManager = new RecentActivityManager();
             var result = await
-        recentActivityManager.GetActivityFeed(userAccountEntity.GetUserEntity().OnlineId, 0, true, true,
-            userAccountEntity);
+        recentActivityManager.GetActivityFeed(_userAccountEntity.GetUserEntity().OnlineId, 0, true, true,
+            _userAccountEntity);
 
             adapter = new RecentActivityRecyclerAdapter(result.feed);
             // Set CustomAdapter as the adapter for RecycleView

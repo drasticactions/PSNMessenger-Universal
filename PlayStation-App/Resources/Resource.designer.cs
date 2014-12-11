@@ -1417,20 +1417,23 @@ namespace PlayStationApp
 			// aapt resource value: 0x7f0a0036
 			public const int list_item = 2131361846;
 			
+			// aapt resource value: 0x7f0a0054
+			public const int main_content = 2131361876;
+			
+			// aapt resource value: 0x7f0a0059
+			public const int media_route_control_frame = 2131361881;
+			
+			// aapt resource value: 0x7f0a005a
+			public const int media_route_disconnect_button = 2131361882;
+			
 			// aapt resource value: 0x7f0a0056
-			public const int media_route_control_frame = 2131361878;
+			public const int media_route_list = 2131361878;
 			
 			// aapt resource value: 0x7f0a0057
-			public const int media_route_disconnect_button = 2131361879;
+			public const int media_route_volume_layout = 2131361879;
 			
-			// aapt resource value: 0x7f0a0053
-			public const int media_route_list = 2131361875;
-			
-			// aapt resource value: 0x7f0a0054
-			public const int media_route_volume_layout = 2131361876;
-			
-			// aapt resource value: 0x7f0a0055
-			public const int media_route_volume_slider = 2131361877;
+			// aapt resource value: 0x7f0a0058
+			public const int media_route_volume_slider = 2131361880;
 			
 			// aapt resource value: 0x7f0a0026
 			public const int middle = 2131361830;
@@ -1453,8 +1456,11 @@ namespace PlayStationApp
 			// aapt resource value: 0x7f0a003c
 			public const int radio = 2131361852;
 			
-			// aapt resource value: 0x7f0a0052
-			public const int recyclerView = 2131361874;
+			// aapt resource value: 0x7f0a0055
+			public const int recentActivityFragment = 2131361877;
+			
+			// aapt resource value: 0x7f0a005b
+			public const int recyclerView = 2131361883;
 			
 			// aapt resource value: 0x7f0a0018
 			public const int right = 2131361816;
@@ -1507,20 +1513,23 @@ namespace PlayStationApp
 			// aapt resource value: 0x7f0a0019
 			public const int start = 2131361817;
 			
+			// aapt resource value: 0x7f0a0050
+			public const int storeImage = 2131361872;
+			
 			// aapt resource value: 0x7f0a004d
 			public const int submit_area = 2131361869;
 			
 			// aapt resource value: 0x7f0a001d
 			public const int tabMode = 2131361821;
 			
-			// aapt resource value: 0x7f0a0058
-			public const int textView1 = 2131361880;
+			// aapt resource value: 0x7f0a0051
+			public const int textView1 = 2131361873;
 			
 			// aapt resource value: 0x7f0a0038
 			public const int title = 2131361848;
 			
-			// aapt resource value: 0x7f0a0051
-			public const int toolbar = 2131361873;
+			// aapt resource value: 0x7f0a0053
+			public const int toolbar = 2131361875;
 			
 			// aapt resource value: 0x7f0a001a
 			public const int top = 2131361818;
@@ -1534,8 +1543,8 @@ namespace PlayStationApp
 			// aapt resource value: 0x7f0a000a
 			public const int vertical = 2131361802;
 			
-			// aapt resource value: 0x7f0a0050
-			public const int webView1 = 2131361872;
+			// aapt resource value: 0x7f0a0052
+			public const int webView1 = 2131361874;
 			
 			// aapt resource value: 0x7f0a002b
 			public const int withText = 2131361835;
@@ -1642,28 +1651,34 @@ namespace PlayStationApp
 			public const int abc_simple_dropdown_hint = 2130903062;
 			
 			// aapt resource value: 0x7f030017
-			public const int Login = 2130903063;
+			public const int FriendActivityView = 2130903063;
 			
 			// aapt resource value: 0x7f030018
-			public const int Main = 2130903064;
+			public const int Login = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int mr_media_route_chooser_dialog = 2130903065;
+			public const int Main = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int mr_media_route_controller_dialog = 2130903066;
+			public const int mr_media_route_chooser_dialog = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int mr_media_route_list_item = 2130903067;
+			public const int mr_media_route_controller_dialog = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int RecentActivityView = 2130903068;
+			public const int mr_media_route_list_item = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int recycler_view_frag = 2130903069;
+			public const int RecyclerViewFragment = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int support_simple_spinner_dropdown_item = 2130903070;
+			public const int StoreActivityView = 2130903070;
+			
+			// aapt resource value: 0x7f03001f
+			public const int support_simple_spinner_dropdown_item = 2130903071;
+			
+			// aapt resource value: 0x7f030020
+			public const int TrophyActivityView = 2130903072;
 			
 			static Layout()
 			{

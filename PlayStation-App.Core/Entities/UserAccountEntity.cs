@@ -55,7 +55,7 @@ namespace PlayStationApp.Core.Entities
 
         public void SetRefreshTime(long time)
         {
-            this._data.RefreshTime = time;
+            this._data.RefreshTime = GetUnixTime(DateTime.Now) + time;
             this._data.StartTime = GetUnixTime(DateTime.Now);
         }
 
@@ -65,7 +65,7 @@ namespace PlayStationApp.Core.Entities
             {
                 this.AccessToken = token;
                 this.RefreshToken = refresh;
-                this.RefreshTime = time;
+                this.RefreshTime = UserAccountEntity.GetUnixTime(DateTime.Now) + time;
                 this.StartTime = UserAccountEntity.GetUnixTime(DateTime.Now);
             }
 

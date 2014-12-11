@@ -81,8 +81,9 @@
     <Reference Include="Xamarin.Android.Support.v7.AppCompat">
       <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.21.0.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.CardView">
-      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.21.0.0.0-beta1\lib\MonoAndroid\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+    <Reference Include="Xamarin.Android.Support.v7.CardView, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.21.0.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Android.Support.v7.GridLayout">
       <HintPath>..\packages\Xamarin.Android.Support.v7.GridLayout.21.0.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.GridLayout.dll</HintPath>
@@ -113,10 +114,16 @@
     <AndroidResource Include="Resources\layout\Login.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\RecentActivityView.axml">
+    <AndroidResource Include="Resources\layout\StoreActivityView.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\recycler_view_frag.axml">
+    <AndroidResource Include="Resources\layout\RecyclerViewFragment.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\FriendActivityView.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\TrophyActivityView.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>
