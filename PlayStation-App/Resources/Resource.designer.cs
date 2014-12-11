@@ -1417,23 +1417,23 @@ namespace PlayStationApp
 			// aapt resource value: 0x7f0a0036
 			public const int list_item = 2131361846;
 			
-			// aapt resource value: 0x7f0a0054
-			public const int main_content = 2131361876;
-			
-			// aapt resource value: 0x7f0a0059
-			public const int media_route_control_frame = 2131361881;
-			
-			// aapt resource value: 0x7f0a005a
-			public const int media_route_disconnect_button = 2131361882;
-			
 			// aapt resource value: 0x7f0a0056
-			public const int media_route_list = 2131361878;
+			public const int main_content = 2131361878;
 			
-			// aapt resource value: 0x7f0a0057
-			public const int media_route_volume_layout = 2131361879;
+			// aapt resource value: 0x7f0a005b
+			public const int media_route_control_frame = 2131361883;
+			
+			// aapt resource value: 0x7f0a005c
+			public const int media_route_disconnect_button = 2131361884;
 			
 			// aapt resource value: 0x7f0a0058
-			public const int media_route_volume_slider = 2131361880;
+			public const int media_route_list = 2131361880;
+			
+			// aapt resource value: 0x7f0a0059
+			public const int media_route_volume_layout = 2131361881;
+			
+			// aapt resource value: 0x7f0a005a
+			public const int media_route_volume_slider = 2131361882;
 			
 			// aapt resource value: 0x7f0a0026
 			public const int middle = 2131361830;
@@ -1456,11 +1456,11 @@ namespace PlayStationApp
 			// aapt resource value: 0x7f0a003c
 			public const int radio = 2131361852;
 			
-			// aapt resource value: 0x7f0a0055
-			public const int recentActivityFragment = 2131361877;
+			// aapt resource value: 0x7f0a0057
+			public const int recentActivityFragment = 2131361879;
 			
-			// aapt resource value: 0x7f0a005b
-			public const int recyclerView = 2131361883;
+			// aapt resource value: 0x7f0a005d
+			public const int recyclerView = 2131361885;
 			
 			// aapt resource value: 0x7f0a0018
 			public const int right = 2131361816;
@@ -1523,13 +1523,19 @@ namespace PlayStationApp
 			public const int tabMode = 2131361821;
 			
 			// aapt resource value: 0x7f0a0051
-			public const int textView1 = 2131361873;
+			public const int targetImage1 = 2131361873;
+			
+			// aapt resource value: 0x7f0a0052
+			public const int targetImage2 = 2131361874;
+			
+			// aapt resource value: 0x7f0a0053
+			public const int textView1 = 2131361875;
 			
 			// aapt resource value: 0x7f0a0038
 			public const int title = 2131361848;
 			
-			// aapt resource value: 0x7f0a0053
-			public const int toolbar = 2131361875;
+			// aapt resource value: 0x7f0a0055
+			public const int toolbar = 2131361877;
 			
 			// aapt resource value: 0x7f0a001a
 			public const int top = 2131361818;
@@ -1543,8 +1549,8 @@ namespace PlayStationApp
 			// aapt resource value: 0x7f0a000a
 			public const int vertical = 2131361802;
 			
-			// aapt resource value: 0x7f0a0052
-			public const int webView1 = 2131361874;
+			// aapt resource value: 0x7f0a0054
+			public const int webView1 = 2131361876;
 			
 			// aapt resource value: 0x7f0a002b
 			public const int withText = 2131361835;
@@ -1678,7 +1684,10 @@ namespace PlayStationApp
 			public const int support_simple_spinner_dropdown_item = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int TrophyActivityView = 2130903072;
+			public const int testLayout = 2130903072;
+			
+			// aapt resource value: 0x7f030021
+			public const int TrophyActivityView = 2130903073;
 			
 			static Layout()
 			{

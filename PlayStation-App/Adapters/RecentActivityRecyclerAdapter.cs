@@ -24,10 +24,14 @@ namespace PlayStationApp.Adapters
         {
             public TextView TextView { get; }
             public ImageView StoreImage { get; }
+            public ImageView TargetImage1 { get; set; }
+            public ImageView TargetImage2 { get; set; }
             public ViewHolder(View v) : base(v)
             {
                 TextView = (TextView)v.FindViewById(Resource.Id.textView1);
                 StoreImage = (ImageView) v.FindViewById(Resource.Id.storeImage);
+                TargetImage1 = v.FindViewById(Resource.Id.targetImage1) as ImageView;
+                TargetImage2 = v.FindViewById(Resource.Id.targetImage2) as ImageView;
             }
         }
 
@@ -57,9 +61,23 @@ namespace PlayStationApp.Adapters
             var viewHolder = p0 as ViewHolder;
             viewHolder?.TextView.SetText(_items[p1].Caption, TextView.BufferType.Normal);
             var imageView = viewHolder?.StoreImage;
-            if(imageView != null && !string.IsNullOrEmpty(_items[p1].LargeImageUrl))
+            if (imageView != null && !string.IsNullOrEmpty(_items[p1].LargeImageUrl))
              Koush.UrlImageViewHelper.SetUrlDrawable(imageView, _items[p1].LargeImageUrl);
-            
+
+            imageView = viewHolder?.TargetImage1;
+            if (imageView != null && _items[p1].Source != null && !string.IsNullOrEmpty(_items[p1].Source.ImageUrl))
+            {
+                Koush.UrlImageViewHelper.SetUrlDrawable(imageView, _items[p1].Source.ImageUrl);
+            }
+
+            imageView = viewHolder?.TargetImage2;
+            RecentActivityEntity.Target target = _items[p1].Targets.FirstOrDefault(o => o.Type.Equals("ONLINE_ID"));
+            if (target != null)
+            {
+                if (imageView != null && !string.IsNullOrEmpty(target.ImageUrl))
+                    Koush.UrlImageViewHelper.SetUrlDrawable(imageView, target.ImageUrl);
+            }
+
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup p0, int p1)

@@ -8,7 +8,7 @@
     android:elevation="5dp">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp">
+        android:layout_height="250dp">
         <ImageView
             android:id="@+id/storeImage"
             android:layout_width="fill_parent"
@@ -21,7 +21,7 @@
             android:background="#80000000"
             android:gravity="center"
             android:padding="5dp"
-            android:lines="2"
+            android:lines="3"
             android:layout_centerInParent="true"
             android:ellipsize="end"
             android:textSize="24dp"
