@@ -129,6 +129,9 @@
     <AndroidResource Include="Resources\layout\testLayout.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\toolbar.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -149,6 +152,8 @@
     <AndroidResource Include="Resources\values\styles.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\drawable\Background.jpg" />
+    <AndroidResource Include="Resources\drawable\drawer_shadow.png" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="urlimageviewhelper">

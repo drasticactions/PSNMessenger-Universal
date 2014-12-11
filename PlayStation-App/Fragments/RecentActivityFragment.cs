@@ -51,7 +51,6 @@ namespace PlayStationApp.Fragments
             return rootView;
         }
 
-
         public async void InitDataSet()
         {
             var recentActivityManager = new RecentActivityManager();

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using PlayStationApp.Core.Entities;
 using PlayStationApp.Core.Interfaces;
+using PlayStationApp.Core.Tools;
 
 namespace PlayStationApp.Core.Managers
 {
@@ -29,7 +30,7 @@ namespace PlayStationApp.Core.Managers
             try
             {
                 var feedNews = isNews ? "news" : "feed";
-                string url = string.Format("https://activity.api.np.km.playstation.net/activity/api/v1/users/{0}/{1}/{2}?filters=PURCHASED&filters=RATED&filters=VIDEO_UPLOAD&filters=SCREENSHOT_UPLOAD&filters=PLAYED_GAME&filters=WATCHED_VIDEO&filters=TROPHY&filters=BROADCASTING&filters=LIKED&filters=PROFILE_PIC&filters=FRIENDED&filters=CONTENT_SHARE", userName, feedNews, pageNumber);
+                var url = string.Format(EndPoints.RecentActivity, userName, feedNews, pageNumber);
                 if (storePromo)
                     url += "&filters=STORE_PROMO";
                 url += "&r=" + Guid.NewGuid();

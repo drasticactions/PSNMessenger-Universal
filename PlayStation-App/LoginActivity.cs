@@ -17,7 +17,7 @@ using PlayStationApp.Core.Tools.UriExtensions;
 
 namespace PlayStationApp
 {
-    [Activity(Label = "LoginActivity")]
+    [Activity(Label = "LoginActivity", ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
     public class LoginActivity : Activity
     {
         public WebView _webView;

@@ -5,6 +5,8 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Content.Res;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.V7.Widget;
@@ -61,8 +63,11 @@ namespace PlayStationApp.Adapters
             var viewHolder = p0 as ViewHolder;
             viewHolder?.TextView.SetText(_items[p1].Caption, TextView.BufferType.Normal);
             var imageView = viewHolder?.StoreImage;
-            if (imageView != null && !string.IsNullOrEmpty(_items[p1].LargeImageUrl))
-             Koush.UrlImageViewHelper.SetUrlDrawable(imageView, _items[p1].LargeImageUrl);
+            if (imageView != null)
+            {
+                Koush.UrlImageViewHelper.SetUrlDrawable(imageView, _items[p1].LargeImageUrl, Resource.Drawable.Background);
+            }
+
 
             imageView = viewHolder?.TargetImage1;
             if (imageView != null && _items[p1].Source != null && !string.IsNullOrEmpty(_items[p1].Source.ImageUrl))

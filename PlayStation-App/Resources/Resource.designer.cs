@@ -1210,58 +1210,64 @@ namespace PlayStationApp
 			public const int abc_textfield_search_material = 2130837554;
 			
 			// aapt resource value: 0x7f020033
-			public const int Icon = 2130837555;
+			public const int Background = 2130837555;
 			
 			// aapt resource value: 0x7f020034
-			public const int mr_ic_audio_vol = 2130837556;
+			public const int drawer_shadow = 2130837556;
 			
 			// aapt resource value: 0x7f020035
-			public const int mr_ic_media_route_connecting_holo_dark = 2130837557;
+			public const int Icon = 2130837557;
 			
 			// aapt resource value: 0x7f020036
-			public const int mr_ic_media_route_connecting_holo_light = 2130837558;
+			public const int mr_ic_audio_vol = 2130837558;
 			
 			// aapt resource value: 0x7f020037
-			public const int mr_ic_media_route_disabled_holo_dark = 2130837559;
+			public const int mr_ic_media_route_connecting_holo_dark = 2130837559;
 			
 			// aapt resource value: 0x7f020038
-			public const int mr_ic_media_route_disabled_holo_light = 2130837560;
+			public const int mr_ic_media_route_connecting_holo_light = 2130837560;
 			
 			// aapt resource value: 0x7f020039
-			public const int mr_ic_media_route_holo_dark = 2130837561;
+			public const int mr_ic_media_route_disabled_holo_dark = 2130837561;
 			
 			// aapt resource value: 0x7f02003a
-			public const int mr_ic_media_route_holo_light = 2130837562;
+			public const int mr_ic_media_route_disabled_holo_light = 2130837562;
 			
 			// aapt resource value: 0x7f02003b
-			public const int mr_ic_media_route_off_holo_dark = 2130837563;
+			public const int mr_ic_media_route_holo_dark = 2130837563;
 			
 			// aapt resource value: 0x7f02003c
-			public const int mr_ic_media_route_off_holo_light = 2130837564;
+			public const int mr_ic_media_route_holo_light = 2130837564;
 			
 			// aapt resource value: 0x7f02003d
-			public const int mr_ic_media_route_on_0_holo_dark = 2130837565;
+			public const int mr_ic_media_route_off_holo_dark = 2130837565;
 			
 			// aapt resource value: 0x7f02003e
-			public const int mr_ic_media_route_on_0_holo_light = 2130837566;
+			public const int mr_ic_media_route_off_holo_light = 2130837566;
 			
 			// aapt resource value: 0x7f02003f
-			public const int mr_ic_media_route_on_1_holo_dark = 2130837567;
+			public const int mr_ic_media_route_on_0_holo_dark = 2130837567;
 			
 			// aapt resource value: 0x7f020040
-			public const int mr_ic_media_route_on_1_holo_light = 2130837568;
+			public const int mr_ic_media_route_on_0_holo_light = 2130837568;
 			
 			// aapt resource value: 0x7f020041
-			public const int mr_ic_media_route_on_2_holo_dark = 2130837569;
+			public const int mr_ic_media_route_on_1_holo_dark = 2130837569;
 			
 			// aapt resource value: 0x7f020042
-			public const int mr_ic_media_route_on_2_holo_light = 2130837570;
+			public const int mr_ic_media_route_on_1_holo_light = 2130837570;
 			
 			// aapt resource value: 0x7f020043
-			public const int mr_ic_media_route_on_holo_dark = 2130837571;
+			public const int mr_ic_media_route_on_2_holo_dark = 2130837571;
 			
 			// aapt resource value: 0x7f020044
-			public const int mr_ic_media_route_on_holo_light = 2130837572;
+			public const int mr_ic_media_route_on_2_holo_light = 2130837572;
+			
+			// aapt resource value: 0x7f020045
+			public const int mr_ic_media_route_on_holo_dark = 2130837573;
+			
+			// aapt resource value: 0x7f020046
+			public const int mr_ic_media_route_on_holo_light = 2130837574;
 			
 			static Drawable()
 			{
@@ -1522,14 +1528,14 @@ namespace PlayStationApp
 			// aapt resource value: 0x7f0a001d
 			public const int tabMode = 2131361821;
 			
-			// aapt resource value: 0x7f0a0051
-			public const int targetImage1 = 2131361873;
-			
 			// aapt resource value: 0x7f0a0052
-			public const int targetImage2 = 2131361874;
+			public const int targetImage1 = 2131361874;
 			
 			// aapt resource value: 0x7f0a0053
-			public const int textView1 = 2131361875;
+			public const int targetImage2 = 2131361875;
+			
+			// aapt resource value: 0x7f0a0051
+			public const int textView1 = 2131361873;
 			
 			// aapt resource value: 0x7f0a0038
 			public const int title = 2131361848;
@@ -1687,7 +1693,10 @@ namespace PlayStationApp
 			public const int testLayout = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int TrophyActivityView = 2130903073;
+			public const int toolbar = 2130903073;
+			
+			// aapt resource value: 0x7f030022
+			public const int TrophyActivityView = 2130903074;
 			
 			static Layout()
 			{
@@ -1752,6 +1761,12 @@ namespace PlayStationApp
 			
 			// aapt resource value: 0x7f050017
 			public const int app_name = 2131034135;
+			
+			// aapt resource value: 0x7f050019
+			public const int drawer_close = 2131034137;
+			
+			// aapt resource value: 0x7f050018
+			public const int drawer_open = 2131034136;
 			
 			// aapt resource value: 0x7f050016
 			public const int hello = 2131034134;
